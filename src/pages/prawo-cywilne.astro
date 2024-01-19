@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <h1>Prawo cywilne</h1>
+    <div class="main-container f-row">
+      <div class="text-holder f-column">
+        <p>
+          Kancelaria specjalizuje się w szeroko pojmowanym obszarze prawa
+          cywilnego. Reprezentujemy interesy naszych klientów począwszy od
+          bieżącego doradztwa prawnego, tworzenia umów, negocjacji z
+          kontrahentami, poprzez etap postępowań sądowych, przed Sądami I i II
+          instancji, aż do ewentualnego postępowania egzekucyjnego.
+        </p>
+        <h2>
+          Do naszych specjalizacji z prawa cywilnego zaliczają się między innymi
+          sprawy, których przedmiotem są:
+        </h2>
+        <ul>
+          <li>Zapłata należności z faktur;</li>
+          <li>
+            Sporządzanie umów (np: najmu, dzierżawy i innych); dochodzenie
+            roszczeń związanych z niewykonaniem lub nienależytym wykonaniem
+            umów, dochodzenie roszczeń z tytułu rękojmi i gwarancji;
+          </li>
+          <li>
+            Zasiedzenia, służebności, ochrona posiadania, droga konieczna,
+            zniesienie współwłasności;
+          </li>
+          <li>
+            Stwierdzenie nabycia spadku, dział spadku, zachowki, stwierdzenie
+            nieważności testamentu;
+          </li>
+          <li>
+            Wypadki komunikacyjne, w tym szkody osobowe: (odszkodowania,
+            zadośćuczynienia, renta, koszty leczenia) i szkody na mieniu : (np:
+            w pojeździe);
+          </li>
+          <li>Ubezwłasnowolnienia;</li>
+          <li>Ochrona dóbr osobistych;</li>
+          <li>
+            Rozliczenie związków faktycznych (konkubinat, związek partnerski);
+          </li>
+          <li>Ochronę posiadania (roszczenie posesoryjne);</li>
+          <li>Eksmisję;</li>
+          <li>Ubezwłasnowolnienie;</li>
+          <li>Uznanie za zmarłego;</li>
+          <li>Stwierdzenie zgonu;</li>
+          <li>Postępowanie egzekucyjne.</li>
+        </ul>
+      </div>
+      <div class="image-holder">
+        <img src="/images/prawo-cywilne.jpg" alt="prawo karne" />
+      </div>
+    </div>
+  </main>
+  <style>
+    main {
+      flex-direction: column;
+
+      & > h1 {
+        display: flex;
+        justify-content: center;
+        flex-basis: 100%;
+      }
+    }
+    .main-container {
+      flex: 1 1 100%;
+      gap: 1rem;
+
+      & > * {
+        display: flex;
+      }
+
+      & .image-holder > img {
+        height: 25vw;
+        width: auto;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</Layout>

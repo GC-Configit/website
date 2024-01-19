@@ -1,0 +1,190 @@
+---
+import IconWithText from "../components/IconWithText.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="header-wrapper">
+      <div class="wrapper">
+        <h1>Twój Spokój, Nasza Walka</h1>
+        <h3>
+          Kancelaria Adwokacka Tadeusz Czachorowski, Chronimy Twoje Interesy!
+        </h3>
+      </div>
+      <div class="image-container">
+        <img src="/images/profile-point.jpg" alt="profile photo" />
+      </div>
+    </div>
+
+    <div class="taking-care-of-wrapper center f-column">
+      <div class="item-container">
+        <div class="row header">
+          <h2>Co możemy dla Ciebie zrobić?</h2>
+        </div>
+        <div class="row">
+          <IconWithText icon="fa-solid fa-section" shouldGrow>
+            Prawo Cywilne
+          </IconWithText>
+          <IconWithText icon="fa-solid fa-gavel" shouldGrow>
+            Prawo Karne
+          </IconWithText>
+        </div>
+        <div class="row">
+          <IconWithText icon="fa-solid fa-people-group" shouldGrow>
+            Prawo Rodzinne
+          </IconWithText>
+          <IconWithText icon="fa-solid fa-balance-scale" shouldGrow>
+            Prawo Pracy
+          </IconWithText>
+        </div>
+        <div class="row">
+          <IconWithText icon="fa-solid fa-car-burst" shouldGrow>
+            Odszkodowania
+          </IconWithText>
+          <IconWithText icon="fa-solid fa-coins" shouldGrow>
+            Egzekucja i windykacja
+          </IconWithText>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-us-container f-row">
+      <div class="image-container-left">
+        <img src="/images/gown.jpg" alt="gown photo" />
+      </div>
+      <div class="text-container f-column">
+        <h1>Lorem ipsum</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rutrum
+          tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Quis
+          ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.
+          Venenatis lectus magna fringilla urna porttitor rhoncus. Libero nunc
+          consequat interdum varius sit amet mattis vulputate. Fringilla ut
+          morbi tincidunt augue interdum. Nibh venenatis cras sed felis eget
+          velit aliquet sagittis. Est ultricies integer quis auctor. Sagittis
+          nisl rhoncus mattis rhoncus urna. Faucibus nisl tincidunt eget nullam.
+          Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Eget nunc
+          lobortis mattis aliquam faucibus purus in massa tempor. Blandit turpis
+          cursus in hac habitasse platea dictumst. Volutpat est velit egestas
+          dui id ornare arcu odio ut. Condimentum mattis pellentesque id nibh
+          tortor id aliquet. Nulla porttitor massa id neque aliquam. Aliquet
+          lectus proin nibh nisl condimentum. Mollis nunc sed id semper risus in
+          hendrerit gravida.
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rutrum
+          tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Quis
+          ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.
+          Venenatis lectus magna fringilla urna porttitor rhoncus. Libero nunc
+          consequat interdum varius sit amet mattis vulputate. Fringilla ut
+          morbi tincidunt augue interdum. Nibh venenatis cras sed felis eget
+          velit aliquet sagittis. Est ultricies integer quis auctor. Sagittis
+          nisl rhoncus mattis rhoncus urna. Faucibus nisl tincidunt eget nullam.
+          Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Eget nunc
+          lobortis mattis aliquam faucibus purus in massa tempor. Blandit turpis
+          cursus in hac habitasse platea dictumst. Volutpat est velit egestas
+          dui id ornare arcu odio ut. Condimentum mattis pellentesque id nibh
+          tortor id aliquet. Nulla porttitor massa id neque aliquam. Aliquet
+          lectus proin nibh nisl condimentum. Mollis nunc sed id semper risus in
+          hendrerit gravida.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    .header-wrapper {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      margin-bottom: -10rem;
+
+      & .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 2rem;
+        width: 75%;
+      }
+
+      & h1,
+      & h3 {
+        display: flex;
+        justify-content: center;
+      }
+
+      .image-container {
+        img {
+          margin-left: 5rem;
+          clip-path: circle(50%);
+          width: 400px;
+          height: auto;
+        }
+      }
+    }
+
+    main {
+      flex-direction: column;
+    }
+
+    .item-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 10rem;
+      padding-bottom: 5rem;
+
+      & > .row {
+        display: flex;
+        flex: 100%;
+        flex-wrap: wrap;
+        padding: 1.25rem 0;
+
+        &.header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .icon-holder {
+          flex: 0 0 50%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+    .item-container::before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 115vh;
+      background-image: url(/images/Themis.png);
+      background-size: cover;
+      filter: blur(7px);
+      z-index: -1;
+    }
+
+    .about-us-container {
+      .image-container-left {
+        img {
+          width: 350px;
+          height: auto;
+          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      .text-container {
+        padding-left: 1rem;
+        gap: 2rem;
+        h1 {
+          text-align: center;
+        }
+      }
+    }
+  </style>
+</Layout>

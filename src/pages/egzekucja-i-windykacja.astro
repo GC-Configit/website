@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1>Egzekucja i windykacja</h1>
+        <div class="main-container f-row">
+			<div class="text-holder f-column">
+				<p>Kancelaria prowadzi w pełnym zakresie zleconą windykację należności począwszy od wezwania dłużnika
+					do zapłaty, prowadzenia negocjacji i sporządzania porozumień i ugód dotyczących sposobu zapłaty długu,
+					przygotowania i prowadzenie spraw w sądzie, na postępowaniu zabezpieczającym i egzekucyjnym kończąc.</p>
+			</div>
+			<div class="image-holder">
+				<img src="/images/prawo-karne.jpg" alt="prawo karne" />
+			</div>
+		</div>
+	</main>
+	<style>
+		main{
+			flex-direction: column;
+
+			& > h1 {
+				display: flex;
+				justify-content: center;
+				flex-basis: 100%;
+				
+			}
+
+		}
+		.main-container{
+			flex: 1 1 100%;
+			gap: 1rem;
+			
+			& > * {
+				display: flex;
+				/* flex-grow: 1; */
+			}
+
+			& .image-holder > img {
+				height: 25vw;
+				width: auto;
+                                border-radius: 10px;
+			}
+		}
+	</style>
+</Layout>
