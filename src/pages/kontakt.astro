@@ -4,70 +4,67 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <div class="f-row main-conatiner">
-      <div class="contact-data-container f-column">
-        <h1>Adwokat Amadeusz Czachorowski</h1>
-        <h2>św. Jadwigi 10/1A, 56-400 Oleśnica</h2>
-		<IconWithText icon="fa-solid fa-envelope">
-		  <a href="mailto: Adwokat.Czachorowski@gmail.com"
-			>Adwokat.Czachorowski@gmail.com</a
-		  >
-		</IconWithText>
-        <IconWithText icon="fa-solid fa-phone">
-          <a href="tel:+48792010469">792 010 469</a>
-        </IconWithText>
-		<h3>NIP: 00000000 Regon: 000000</h3>
+  <main class="f-column">
+    <div class="contact-details f-row">
+      <div class="text-container f-column center">
+        <h1 class="f-row center">Kontakt z kancelaria</h1>
+        <h4 class="center">
+          Zapraszamy do kontaktu telefonicznego lub mailowego.
+        </h4>
+        <div class="details f-column">
+          <h2>
+            Adwokat Amadeusz Czachorowski <br />
+            św. Jadwigi 10/1A, 56-400 Oleśnica
+          </h2>
+          <IconWithText icon="fa-solid fa-envelope">
+            <a href="mailto: Adwokat.Czachorowski@gmail.com"
+              >Adwokat.Czachorowski@gmail.com</a
+            >
+          </IconWithText>
+          <IconWithText icon="fa-solid fa-phone">
+            <a href="tel:+48792010469">792 010 469</a>
+          </IconWithText>
+          <h3>NIP: 9112049789 Regon: 526784856</h3>
+        </div>
       </div>
-      <div id="map-continer">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.539647083603!2d17.382351099999998!3d51.209133800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe2e0a4ddbef9%3A0x9912040f6b58e96b!2zxZp3acSZdGVqIEphZHdpZ2kgMTAvMWEsIDU2LTQwMCBPbGXFm25pY2E!5e0!3m2!1spl!2spl!4v1704743982918!5m2!1spl!2spl"
-          width="100%"
-          height="450"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+      <img src="/images/contact-us.webp" alt="kontakt kancelari" />
+    </div>
+    <div id="map-continer">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.539647083603!2d17.382351099999998!3d51.209133800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe2e0a4ddbef9%3A0x9912040f6b58e96b!2zxZp3acSZdGVqIEphZHdpZ2kgMTAvMWEsIDU2LTQwMCBPbGXFm25pY2E!5e0!3m2!1spl!2spl!4v1704743982918!5m2!1spl!2spl"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </main>
 
   <style>
-    .main-conatiner {
-      display: flex;
-      flex-direction: column;
-      padding-top: 2em;
-      flex: 1 1 100%;
-	  gap: 2rem;
-      & > * {
-        flex: 1;
+    .contact-details {
+      margin-bottom: 2rem;
+      background-color: rgb(34, 61, 60);
+
+      h1,
+      h2,
+      h3,
+      h4,
+      a,
+      i {
+        color: #fff;
       }
 
-      #map-continer {
-        display: flex;
-        justify-content: center;
+      .text-container {
+        flex-grow: 1;
       }
 
-      .contact-data-container {
-        display: flex;
-        align-items: center;
-
-		& .icon-holder{
-			margin-bottom: 1rem;
-		}
+      img {
+        margin-left: auto;
+        padding: 2rem;
+        aspect-ratio: 1/1;
+        max-width: 40%;
       }
-      /* &::before{
-	  content: "";
-      position: absolute;
-      top: 0px;
-      left: 0;
-      width: 100%;
-      height: 115vh;
-      background-image: url(/images/Contact-us.jpg);
-      background-size: cover;
-      filter: blur(5px);
-      z-index: -1;
-	  } */
     }
 
     a {

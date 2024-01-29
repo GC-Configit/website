@@ -1,8 +1,8 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro'
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,113 +10,112 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<script src="https://kit.fontawesome.com/879cc0a6e4.js" crossorigin="anonymous"></script>
-		<title>{title}</title>
-	</head>
-	<body>
-		<Navbar></Navbar>
-		
-		<slot />
-		<Footer></Footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <script
+      src="https://kit.fontawesome.com/879cc0a6e4.js"
+      crossorigin="anonymous"></script>
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+
+    <slot />
+    <Footer />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-		--primary-text: #fff;
-		--secondary-text: black;
-	}
-	html, body {
-    font-family: 'Arial', sans-serif;
+  :root {
+    --primary-text: black;
+    --secondary-text: #fff;
+    --background-color: #fff;
+  }
+  html,
+  body {
+    font-family: "Verdana", sans-serif;
     margin: 0;
     padding: 0;
-	}
+  }
 
-	html {
-		/* Fix for footer */
-		height: 0; 
+  html {
+    /* Fix for footer */
+    height: 0;
+  }
 
-	}
+  body {
+    background-color: var(--background-color);
+    position: relative;
+    min-height: 100vh;
+    /* footer height */
+    padding-bottom: 3rem;
+  }
 
-	body {
-		background-color: #929487;
-		position: relative;
-		min-height: 100vh;
-		/* footer height */
-		padding-bottom: 3rem; 
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--primary-text);
+  }
 
-	h1,h2,h3,h4,h5,h6 {
-		color: var(--primary-text);
-	}
+  i {
+    color: var(--primary-text);
+  }
 
-	i {
-		color: var(--primary-text);
-	}
+  p {
+    color: var(--primary-text);
+    line-height: 1.7em;
+    text-align: justify;
+  }
 
-	p {
-		color: var(--secondary-text);
-	}
+  main {
+    display: flex;
+    margin: 0 10rem;
+    margin-bottom: 10rem;
+  }
 
-	main{
-		display: flex;
-    	margin: 0 10rem;
-		margin-bottom: 10rem;
-	}
+  @media screen and (max-width: 768px) {
+    main {
+      margin: 0 1rem;
+    }
+  }
 
-	@media screen and (max-width: 768px) {
-		main{
-			margin: 0 1rem;
-		}
-	}
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	.center{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  .f-column {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .f-row {
+    display: flex;
+    flex-direction: row;
+  }
 
-	.f-column{
-		display: flex;
-		flex-direction: column;
-	}
+  .text-holder {
+    & li {
+      /* margin-bottom: 0.75rem; */
+    }
 
-	.f-row{
-		display: flex;
-		flex-direction: row;
-	}
+    p,
+    li {
+      line-height: 1.7em;
+    }
+  }
 
-	
-	.text-holder{
-			& li{
-				/* margin-bottom: 0.75rem; */
-			}
-
-			p, li {
-				line-height: 1.7em
-			}
-		}
-
-	@media screen and (max-width: 768px) {
-		/* Is related to text-holder that's why its here */
-		main > .main-container{
-			flex-direction: column;
-		}
-		
-	}
-	</style>
+  @media screen and (max-width: 768px) {
+    /* Is related to text-holder that's why its here */
+    main > .main-container {
+      flex-direction: column;
+    }
+  }
+</style>

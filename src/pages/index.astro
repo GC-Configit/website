@@ -1,190 +1,190 @@
 ---
+import BoxedIcon from "../components/BoxedIcon.astro";
 import IconWithText from "../components/IconWithText.astro";
 import Layout from "../layouts/Layout.astro";
+import "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <div class="header-wrapper">
-      <div class="wrapper">
-        <h1>Twój Spokój, Nasza Walka</h1>
-        <h3>
-          Kancelaria Adwokacka Tadeusz Czachorowski, Chronimy Twoje Interesy!
-        </h3>
-      </div>
-      <div class="image-container">
-        <img src="/images/profile-point.jpg" alt="profile photo" />
+      <div class="quote">
+        <h1>Dobro klienta naszą największą wartością</h1>
+        <h3>Adwokat Amadeusz Czachorowski</h3>
       </div>
     </div>
 
-    <div class="taking-care-of-wrapper center f-column">
-      <div class="item-container">
-        <div class="row header">
-          <h2>Co możemy dla Ciebie zrobić?</h2>
-        </div>
-        <div class="row">
-          <IconWithText icon="fa-solid fa-section" shouldGrow>
-            Prawo Cywilne
-          </IconWithText>
-          <IconWithText icon="fa-solid fa-gavel" shouldGrow>
-            Prawo Karne
-          </IconWithText>
-        </div>
-        <div class="row">
-          <IconWithText icon="fa-solid fa-people-group" shouldGrow>
-            Prawo Rodzinne
-          </IconWithText>
-          <IconWithText icon="fa-solid fa-balance-scale" shouldGrow>
-            Prawo Pracy
-          </IconWithText>
-        </div>
-        <div class="row">
-          <IconWithText icon="fa-solid fa-car-burst" shouldGrow>
-            Odszkodowania
-          </IconWithText>
-          <IconWithText icon="fa-solid fa-coins" shouldGrow>
-            Egzekucja i windykacja
-          </IconWithText>
-        </div>
+    <div class="card-container f-column">
+      <h1 class="center">Nasze usługi</h1>
+      <div class="cards f-row">
+        <BoxedIcon icon="fa-solid fa-gavel" header="Prawo Karne">
+          Kancelaria specjalizuje się w szeroko pojmowanym obszarze prawa
+          karnego. Prowadzimy sprawy karne związane zarówno z obroną interesów
+          oskarżonego jak i pokrzywdzonego. Oferujemy pomoc prawną na każdym
+          etapie postępowania, od chwili zatrzymania po etap postępowania przed
+          Sądami I i II instancji. Pomoc prawna świadczona jest w ramach
+          wszelkich przewidzianych kodeksem karnym przestępstw i wykroczeń
+          przewidzianychw kodeksie wykroczeń.
+        </BoxedIcon>
+        <BoxedIcon icon="fa-solid fa-section" header="Prawo Cywilne">
+          Kancelaria specjalizuje się w szeroko pojmowanym obszarze prawa
+          cywilnego. Reprezentujemy interesy naszych klientów począwszy od
+          bieżącego doradztwa prawnego, tworzenia umów, negocjacji z
+          kontrahentami, poprzez etap postępowań sądowych, przed Sądami I i II
+          instancji, aż do ewentualnego postępowania egzekucyjnego.
+        </BoxedIcon>
+        <BoxedIcon icon="fa-solid fa-car-burst" header="Odszkodowania">
+          Nasza Kancelaria zajmuje się dochodzeniem świadczeń odszkodowawczych
+          od towarzystw ubezpieczeniowych, bezpośrednio od pracodawców, oraz od
+          placówek medycznych. Prowadzimy sprawy zarówno przed sądami, jak i
+          komisjami do spraw orzekania o zdarzeniach medycznych.
+        </BoxedIcon>
+        <BoxedIcon icon="fa-solid fa-people-group" header="Prawo Rodzinne">
+          Kancelaria posiada duże doświadczenie z zakresu prawa rodzinnego
+          zdobyte w licznych postępowaniach zawisłych przed sądami powszechnymi.
+          Reprezentujemy naszych w ramach rozmów przedsądowych, czy w
+          postępowaniach mediacyjnych.
+        </BoxedIcon>
+        <BoxedIcon icon="fa-solid fa-balance-scale" header="Prawo Pracy" />
+        <BoxedIcon icon="fa-solid fa-coins" header="Egzekucja i windykacja" />
       </div>
     </div>
 
-    <div class="about-us-container f-row">
-      <div class="image-container-left">
-        <img src="/images/gown.jpg" alt="gown photo" />
-      </div>
-      <div class="text-container f-column">
-        <h1>Lorem ipsum</h1>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rutrum
-          tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Quis
-          ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.
-          Venenatis lectus magna fringilla urna porttitor rhoncus. Libero nunc
-          consequat interdum varius sit amet mattis vulputate. Fringilla ut
-          morbi tincidunt augue interdum. Nibh venenatis cras sed felis eget
-          velit aliquet sagittis. Est ultricies integer quis auctor. Sagittis
-          nisl rhoncus mattis rhoncus urna. Faucibus nisl tincidunt eget nullam.
-          Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Eget nunc
-          lobortis mattis aliquam faucibus purus in massa tempor. Blandit turpis
-          cursus in hac habitasse platea dictumst. Volutpat est velit egestas
-          dui id ornare arcu odio ut. Condimentum mattis pellentesque id nibh
-          tortor id aliquet. Nulla porttitor massa id neque aliquam. Aliquet
-          lectus proin nibh nisl condimentum. Mollis nunc sed id semper risus in
-          hendrerit gravida.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Rutrum
-          tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Quis
-          ipsum suspendisse ultrices gravida dictum fusce ut placerat orci.
-          Venenatis lectus magna fringilla urna porttitor rhoncus. Libero nunc
-          consequat interdum varius sit amet mattis vulputate. Fringilla ut
-          morbi tincidunt augue interdum. Nibh venenatis cras sed felis eget
-          velit aliquet sagittis. Est ultricies integer quis auctor. Sagittis
-          nisl rhoncus mattis rhoncus urna. Faucibus nisl tincidunt eget nullam.
-          Vestibulum mattis ullamcorper velit sed ullamcorper morbi. Eget nunc
-          lobortis mattis aliquam faucibus purus in massa tempor. Blandit turpis
-          cursus in hac habitasse platea dictumst. Volutpat est velit egestas
-          dui id ornare arcu odio ut. Condimentum mattis pellentesque id nibh
-          tortor id aliquet. Nulla porttitor massa id neque aliquam. Aliquet
-          lectus proin nibh nisl condimentum. Mollis nunc sed id semper risus in
-          hendrerit gravida.
-        </div>
+    <div class="green-card f-column center">
+      <h1>
+        Kompleksowe rozwiązania prawne <br /> dostosowane do Twoich potrzeb
+      </h1>
+      <p>
+        Kancelaria Adwokacka Adwokat Amadeusz Czachorowski świadczy kompleksową
+        pomoc prawną w zakresie obsługi osób fizycznych i podmiotów
+        gospodarczych na terenie Oleśnicy, Wrocławia i okolic, w sprawach
+        karnych, w zakresie prawa cywilnego oraz rodzinnego. Reprezentujemy
+        interesy naszych klientów zarówno na etapie postępowań sądowych, jak i
+        przedsądowych, w postępowaniach przygotowawczych, a także w sporach i
+        negocjacjach z kontrahentami i klientami biznesowymi. Charakter naszej
+        działalności oraz indywidualne podejście pozwoli na zajęcie się Państwa
+        problemem w sposób całościowy. Poszukujesz prawnika w Oleśnicy lub w
+        okolicach , serdecznie zapraszam do nawiązania kontaktu
+      </p>
+    </div>
+
+    <div class="about-us f-row">
+      <img src="/images/about-us.webp" alt="Adwokat Amadeusz Czachorowski" />
+      <div class="text-container f-column center">
+        <h1>Amadeusz Czachorowski</h1>
+        <p>
+          Jestem wpisany na listę adwokatów przy Okręgowej Radzie Adwokackiej we
+          Wrocławiu. Moją praktykę rozpocząłem już na początku studiów
+          prawniczych w renomowanej Kancelarii Adwokackiej na terenie
+          Wrocławia,z którą związany byłem przez cały okres trwania studiów i
+          aplikacji adwokackiej, aż do uzyskania tytułu zawodowego adwokata. W
+          swojej karierze praktykowałem na płaszczyźnie wielu gałęzi prawa,
+          uczestniczyłem w setkach procesów karnych oraz cywilnych, brałem
+          czynny udział w wielu głośnych sprawach, toczących się przed Sądami
+          Apelacji Wrocławskiej występując w roli obrońcy. W swojej karierze
+          działałem jako kurator dla osób nieznanych z miejsca pobytu czy też
+          kurator dla spółek nieposiadających zarządu
+        </p>
       </div>
     </div>
   </main>
-
-  <style>
-    .header-wrapper {
-      display: flex;
-      flex-grow: 1;
-      justify-content: center;
-      margin-bottom: -10rem;
-
-      & .wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-bottom: 2rem;
-        width: 75%;
-      }
-
-      & h1,
-      & h3 {
-        display: flex;
-        justify-content: center;
-      }
-
-      .image-container {
-        img {
-          margin-left: 5rem;
-          clip-path: circle(50%);
-          width: 400px;
-          height: auto;
-        }
-      }
-    }
-
-    main {
-      flex-direction: column;
-    }
-
-    .item-container {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 10rem;
-      padding-bottom: 5rem;
-
-      & > .row {
-        display: flex;
-        flex: 100%;
-        flex-wrap: wrap;
-        padding: 1.25rem 0;
-
-        &.header {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .icon-holder {
-          flex: 0 0 50%;
-          display: flex;
-          justify-content: center;
-        }
-      }
-    }
-
-    .item-container::before {
-      content: "";
-      position: absolute;
-      top: 0px;
-      left: 0;
-      width: 100%;
-      height: 115vh;
-      background-image: url(/images/Themis.png);
-      background-size: cover;
-      filter: blur(7px);
-      z-index: -1;
-    }
-
-    .about-us-container {
-      .image-container-left {
-        img {
-          width: 350px;
-          height: auto;
-          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
-        }
-      }
-
-      .text-container {
-        padding-left: 1rem;
-        gap: 2rem;
-        h1 {
-          text-align: center;
-        }
-      }
-    }
-  </style>
 </Layout>
+
+<style>
+  .header-wrapper {
+    background-image: url(/images/intro.webp);
+    margin: 0 -10rem;
+    aspect-ratio: 2443/1626;
+    position: relative;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    .quote {
+      position: absolute;
+      bottom: 9vw;
+      left: 3vw;
+      border-left: 0.75rem dashed lightgray;
+      padding-left: 2rem;
+
+      h1,
+      h3 {
+        color: #fff;
+      }
+    }
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .card-container {
+    padding: 2rem 0;
+    .cards {
+      gap: 2rem;
+      padding: 2rem 0;
+      flex-wrap: wrap;
+
+      & > * {
+        flex-basis: 40%;
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .green-card {
+    background-color: rgb(34, 61, 60);
+    padding: 5rem;
+    margin: 4rem 0;
+
+    h1,
+    p {
+      color: #fff;
+      text-align: justify;
+    }
+
+    h1 {
+      letter-spacing: 0.2em;
+    }
+  }
+
+
+
+  .about-us {
+    background-color: rgb(240, 242, 244);
+
+    img {
+      padding: 2rem;
+      padding-left: 5rem;
+    }
+
+    .text-container {
+      margin: 8rem 5rem;
+      padding: 2.5rem;
+      background-color: rgb(34, 61, 60);
+      h1,
+      p {
+        color: #fff;
+      }
+
+      h1{
+        letter-spacing: 0.3rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-us {
+      flex-wrap: wrap;
+      .text-container{
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+</style>

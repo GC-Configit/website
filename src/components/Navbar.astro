@@ -18,11 +18,27 @@ import IconWithText from "./IconWithText.astro";
     <li><a href="/egzekucja-i-windykacja">Egzekucja i windykacja</a></li>
     <li><a href="/kontakt">Kontakt</a></li>
   </ul>
+  <div class="line"></div>
 </nav>
 
 <style>
   nav {
-    background-color: #6b6054;
+    a {
+      color: black;
+    }
+
+    .line{
+      width: 50%;
+      border-bottom: 1px solid #000;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+      display: none;
+    }
   }
   .image-container {
     max-height: 250px;
@@ -41,7 +57,7 @@ import IconWithText from "./IconWithText.astro";
 
     .icon-holder {
       cursor: pointer;
-      i,h3 {
+      i,a {
         color: black;
       }
     }

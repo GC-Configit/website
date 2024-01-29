@@ -1,17 +1,58 @@
 <footer>
+  <div class="container f-row">
+    <div class="account">
+      <h4>
+        Kancelaria Adwokacka Adwokat Amadeusz Czachorowski
+        <br />
+        NIP: 9112049789, REGON: 526784856
+        <br />
+        nr rachunku: PL84 1090 2369 0000 0001 5588 0905
+      </h4>
+    </div>
+    <div class="contact f-column">
+      <p>
+        ul. Św. Jadwigi 10/1A, 56-400 Oleśnica
+        <br />
+        Email: adwokat.czachorowski@gmail.com
+        <br />
+        kom. 792-010-569
+      </p>
+    </div>
+  </div>
   <p>&copy; 2023 Advocate Office. All rights reserved.</p>
 </footer>
 
 <style>
   footer {
-    background-color: #6b6054;
+    background-color: rgb(34, 61, 60);
     color: #fff;
     text-align: center;
 
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 3rem; 
+    height: 10rem;
+    padding: 1rem 0;
+
+    .container{
+      > * {
+        padding: 0.25rem 2rem;
+      }
+    }
+
+
+    h4,p {
+      color: #fff;
+    }
+
+    h4{
+      text-align: left;
+      line-height: 1.7em;
+    }
+
+    .contact{
+      margin-left: auto;
+    }
   }
 
   @media screen and (max-width: 768px) {
