@@ -187,6 +187,21 @@ import "../layouts/Layout.astro";
     }
   }
 
+  @media screen and (max-width: 768px) {
+    .card-container {
+      .cards {
+        margin: 0 0.5rem;
+        & > * {
+          flex-basis: 100%;
+        }
+
+        p {
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+
   .green-card {
     background-color: rgb(34, 61, 60);
     padding: 5rem;
@@ -228,11 +243,29 @@ import "../layouts/Layout.astro";
   }
 
   @media screen and (max-width: 768px) {
+    .green-card {
+      padding: 2rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
     .about-us {
       flex-wrap: wrap;
       .text-container {
         margin: 0;
-        padding: 0;
+        padding: 1.5rem;
+        
+        h1 {
+          text-align: center;
+        }
+        p {
+          padding: 1rem;
+        }
+      }
+
+      img {
+        padding-left: unset;
+        padding: 2rem;
+        max-width: 80%;
       }
     }
     .header-wrapper {
