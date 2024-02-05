@@ -30,7 +30,9 @@ const { title } = Astro.props;
 </html>
 <style is:global>
   :root {
-    --primary-text: black;
+    --primary-text: rgb(34, 61, 60);
+    --standard-font-family: "Proxima Nova", serif;
+    --header-font-family: "Linotype Diot Italic", serif;
     --secondary-text: #fff;
     --background-color: #fff;
   }
@@ -39,6 +41,9 @@ const { title } = Astro.props;
     font-family: "Verdana", sans-serif;
     margin: 0;
     padding: 0;
+  }
+  * {
+    font-family: var(--standard-font-family);
   }
 
   html {
@@ -54,6 +59,16 @@ const { title } = Astro.props;
     padding-bottom: 3rem;
   }
 
+  @font-face {
+    font-family: "Proxima Nova";
+    src: url("/fonts/proximanova_regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Linotype Diot Italic";
+    src: url("/fonts/linotypediot_italic.ttf");
+  }
+
   h1,
   h2,
   h3,
@@ -61,6 +76,7 @@ const { title } = Astro.props;
   h5,
   h6 {
     color: var(--primary-text);
+    font-family: var(--header-font-family);
   }
 
   i {
@@ -81,7 +97,7 @@ const { title } = Astro.props;
 
   @media screen and (max-width: 768px) {
     main {
-      margin: 0 1rem;
+      margin: 0 0.25rem;
     }
   }
 
@@ -101,11 +117,12 @@ const { title } = Astro.props;
     flex-direction: row;
   }
 
-  .text-holder {
-    & li {
-      /* margin-bottom: 0.75rem; */
-    }
+  .mobile{
+    display: none;
+  }
 
+
+  .text-holder {
     p,
     li {
       line-height: 1.7em;
@@ -117,5 +134,25 @@ const { title } = Astro.props;
     main > .main-container {
       flex-direction: column;
     }
+
+    .f-column {
+      flex-wrap: wrap;
+    }
+
+    .f-row {
+      flex-wrap: wrap;
+    }
+
+    .mobile{
+      display: block;
+    }
+
+    .desktop{
+      display: none;
+    }
+  }
+
+  .p-1{
+    padding: 1rem;
   }
 </style>

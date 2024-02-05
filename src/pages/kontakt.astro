@@ -7,24 +7,26 @@ import Layout from "../layouts/Layout.astro";
   <main class="f-column">
     <div class="contact-details f-row">
       <div class="text-container f-column center">
-        <h1 class="f-row center">Kontakt z kancelaria</h1>
-        <h4 class="center">
+        <h1 class="f-row center">Kontakt z kancelarią</h1>
+        <span class="center p-1">
           Zapraszamy do kontaktu telefonicznego lub mailowego.
-        </h4>
-        <div class="details f-column">
-          <h2>
-            Adwokat Amadeusz Czachorowski <br />
-            św. Jadwigi 10/1A, 56-400 Oleśnica
-          </h2>
-          <IconWithText icon="fa-solid fa-envelope">
-            <a href="mailto: Adwokat.Czachorowski@gmail.com"
-              >Adwokat.Czachorowski@gmail.com</a
-            >
-          </IconWithText>
-          <IconWithText icon="fa-solid fa-phone">
-            <a href="tel:+48792010469">792 010 469</a>
-          </IconWithText>
-          <h3>NIP: 9112049789 Regon: 526784856</h3>
+        </span>
+        <div class="details f-row">
+          <div class="f-column">
+            <span> Adwokat Amadeusz Czachorowski</span>
+            <span> św. Jadwigi 10/1A, 56-400 Oleśnica</span>
+            <span>NIP: 9112049789 Regon: 526784856</span>
+          </div>
+          <div class="f-column">
+            <IconWithText icon="fa-solid fa-envelope" skipHeader>
+              <a href="mailto: Adwokat.Czachorowski@gmail.com"
+                >Adwokat.Czachorowski@gmail.com</a
+              >
+            </IconWithText>
+            <IconWithText icon="fa-solid fa-phone" skipHeader>
+              <a href="tel:+48792010469">792 010 469</a>
+            </IconWithText>
+          </div>
         </div>
       </div>
       <img src="/images/contact-us.webp" alt="kontakt kancelari" />
@@ -46,12 +48,28 @@ import Layout from "../layouts/Layout.astro";
       margin-bottom: 2rem;
       background-color: rgb(34, 61, 60);
 
+      .details {
+        margin-top: 2rem;
+        width: 100%;
+        justify-content: space-around;
+        gap: 2rem;
+
+        * {
+          gap: 0.25rem;
+        }
+
+        .icon-holder:last-child {
+          margin-top: auto;
+        }
+      }
+
       h1,
       h2,
       h3,
       h4,
       a,
-      i {
+      i,
+      span {
         color: #fff;
       }
 
@@ -61,16 +79,24 @@ import Layout from "../layouts/Layout.astro";
 
       img {
         margin-left: auto;
+        object-fit: cover;
         padding: 2rem;
         aspect-ratio: 1/1;
         max-width: 40%;
+      }
+
+      @media screen and (max-width: 768px) {
+        img {
+          max-width: 80%;
+          margin: 0;
+        }
+        
       }
     }
 
     a {
       text-decoration: none;
       color: #fff;
-      font-weight: bold;
       &:hover {
         text-decoration: underline;
       }

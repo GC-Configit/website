@@ -59,6 +59,20 @@
     footer {
       position: static;
       margin-top: 2rem;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .container{
+        > * {
+          padding: 0;
+        }
+      }
+
+      .contact{
+        margin-left: unset;
+      }
     }
   }
 </style>

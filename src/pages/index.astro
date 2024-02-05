@@ -8,16 +8,24 @@ import "../layouts/Layout.astro";
 <Layout title="Welcome to Astro.">
   <main>
     <div class="header-wrapper">
-      <div class="quote">
+      <div class="desktop quote">
         <h1>Dobro klienta naszą największą wartością</h1>
         <h3>Adwokat Amadeusz Czachorowski</h3>
+      </div>
+      <div class="mobile quote">
+        <h5>Dobro klienta naszą największą wartością</h5>
+        <h6>Adwokat Amadeusz Czachorowski</h6>
       </div>
     </div>
 
     <div class="card-container f-column">
       <h1 class="center">Nasze usługi</h1>
       <div class="cards f-row">
-        <BoxedIcon icon="fa-solid fa-gavel" header="Prawo Karne">
+        <BoxedIcon
+          icon="fa-solid fa-gavel"
+          header="prawo karne"
+          href="/prawo-karne-i-wykroczenia"
+        >
           Kancelaria specjalizuje się w szeroko pojmowanym obszarze prawa
           karnego. Prowadzimy sprawy karne związane zarówno z obroną interesów
           oskarżonego jak i pokrzywdzonego. Oferujemy pomoc prawną na każdym
@@ -26,27 +34,55 @@ import "../layouts/Layout.astro";
           wszelkich przewidzianych kodeksem karnym przestępstw i wykroczeń
           przewidzianychw kodeksie wykroczeń.
         </BoxedIcon>
-        <BoxedIcon icon="fa-solid fa-section" header="Prawo Cywilne">
+        <BoxedIcon
+          icon="fa-solid fa-section"
+          header="prawo cywilne"
+          href="/prawo-cywilne"
+        >
           Kancelaria specjalizuje się w szeroko pojmowanym obszarze prawa
           cywilnego. Reprezentujemy interesy naszych klientów począwszy od
           bieżącego doradztwa prawnego, tworzenia umów, negocjacji z
           kontrahentami, poprzez etap postępowań sądowych, przed Sądami I i II
           instancji, aż do ewentualnego postępowania egzekucyjnego.
         </BoxedIcon>
-        <BoxedIcon icon="fa-solid fa-car-burst" header="Odszkodowania">
+        <BoxedIcon
+          icon="fa-solid fa-coins"
+          header="egzekucja i windykacja"
+          href="/egzekujca-i-windykacja"
+        >
+          Kancelaria adwokacka specjalizująca się w egzekucji i windykacji
+          oferuje kompleksowe usługi prawne związane z odzyskiwaniem należności.
+          Jej głównym celem jest skuteczne prowadzenie postępowań egzekucyjnych,
+          zarówno sądowych, jak i komorniczych, w celu odzyskania długów dla
+          swoich klientów. Kancelaria adwokacka doradza swoim klientom w
+          zakresie strategii egzekucyjnej, analizuje dokumentację i reprezentuje
+          ich interesy przed sądami i organami egzekucyjnymi.
+        </BoxedIcon>
+        <BoxedIcon
+          icon="fa-solid fa-car-burst"
+          header="odszkodowania"
+          href="/odszkodowania"
+        >
           Nasza Kancelaria zajmuje się dochodzeniem świadczeń odszkodowawczych
           od towarzystw ubezpieczeniowych, bezpośrednio od pracodawców, oraz od
           placówek medycznych. Prowadzimy sprawy zarówno przed sądami, jak i
           komisjami do spraw orzekania o zdarzeniach medycznych.
         </BoxedIcon>
-        <BoxedIcon icon="fa-solid fa-people-group" header="Prawo Rodzinne">
+        <BoxedIcon
+          icon="fa-solid fa-people-group"
+          header="prawo rodzinne"
+          href="/prawo-rodzinne"
+        >
           Kancelaria posiada duże doświadczenie z zakresu prawa rodzinnego
           zdobyte w licznych postępowaniach zawisłych przed sądami powszechnymi.
           Reprezentujemy naszych w ramach rozmów przedsądowych, czy w
           postępowaniach mediacyjnych.
         </BoxedIcon>
-        <BoxedIcon icon="fa-solid fa-balance-scale" header="Prawo Pracy" />
-        <BoxedIcon icon="fa-solid fa-coins" header="Egzekucja i windykacja" />
+        <BoxedIcon icon="fa-solid fa-franc-sign" header="pomoc frankowiczą">
+          Nasz akancelaria świadczy kompleksową obsługę prawną dla
+          kredytobiorców posiadających kredyt waloryzowany kursem franka
+          szwajcarskiego bądź pozostałych walut obcych
+        </BoxedIcon>
       </div>
     </div>
 
@@ -107,13 +143,21 @@ import "../layouts/Layout.astro";
 
     .quote {
       position: absolute;
-      bottom: 9vw;
+      top: 20vw;
       left: 3vw;
       border-left: 0.75rem dashed lightgray;
       padding-left: 2rem;
 
+      animation: fadeIn 5s;
+      -webkit-animation: fadeIn 5s;
+      -moz-animation: fadeIn 5s;
+      -o-animation: fadeIn 5s;
+      -ms-animation: fadeIn 5s;
+
       h1,
-      h3 {
+      h3,
+      h5,
+      h6 {
         color: #fff;
       }
     }
@@ -131,8 +175,14 @@ import "../layouts/Layout.astro";
       flex-wrap: wrap;
 
       & > * {
-        flex-basis: 40%;
+        /* with gap makes 3 cards in row */
+        flex-basis: 25%;
         flex-grow: 1;
+      }
+
+      p {
+        text-align: center;
+        padding: 0 5rem;
       }
     }
   }
@@ -153,14 +203,13 @@ import "../layouts/Layout.astro";
     }
   }
 
-
-
   .about-us {
     background-color: rgb(240, 242, 244);
 
     img {
       padding: 2rem;
       padding-left: 5rem;
+      object-fit: cover;
     }
 
     .text-container {
@@ -172,7 +221,7 @@ import "../layouts/Layout.astro";
         color: #fff;
       }
 
-      h1{
+      h1 {
         letter-spacing: 0.3rem;
       }
     }
@@ -181,10 +230,63 @@ import "../layouts/Layout.astro";
   @media screen and (max-width: 768px) {
     .about-us {
       flex-wrap: wrap;
-      .text-container{
+      .text-container {
         margin: 0;
         padding: 0;
       }
+    }
+    .header-wrapper {
+      .quote {
+        top: 40vw;
+        left: 41vw;
+        border-left: 0.25rem dashed lightgray;
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+  /* Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 </style>

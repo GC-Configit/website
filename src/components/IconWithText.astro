@@ -2,12 +2,15 @@
 interface Props {
   icon: string;
   shouldGrow?: boolean;
+  skipHeader?: boolean;
 }
 
-const { icon, shouldGrow } = Astro.props;
+const { icon, shouldGrow, skipHeader } = Astro.props;
 ---
 <div class="icon-holder f-row">
-    <span class={shouldGrow != null || shouldGrow == true ? "grow": ""}><i class={icon}></i><h3><slot /></h3><span>
+    <span class={shouldGrow != null || shouldGrow == true ? "grow": ""}><i class={icon}></i>
+      {skipHeader ? <slot/> : <h3><slot /></h3>}
+      <span>
 </div>
 
 
