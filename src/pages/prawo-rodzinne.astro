@@ -1,63 +1,28 @@
 ---
-import Title from '../components/Title.astro';
+import ServiceDescription from '../components/ServiceDescription.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Title>Prawo Rodzinne</Title>
-        <div class="main-container f-row">
-			<div class="text-holder f-column">
-				<p>Kancelaria posiada duże doświadczenie z zakresu prawa rodzinnego zdobyte w licznych postępowaniach
-					zawisłych przed sądami powszechnymi. Reprezentujemy naszych w ramach rozmów przedsądowych, czy w
-					postępowaniach mediacyjnych.</p>
-				<h2>Do naszych specjalizacji z prawa rodzinnego zaliczają się między innymi
-					sprawy, których przedmiotem są:</h2>
-					<ul>
-						<li>Rozwód;</li>
-						<li>Separacja;</li>
-						<li>Uregulowanie kontaktów z dziećmi;</li>
-						<li>Alimenty;</li>
-						<li>Przysposobienie;</li>
-						<li>Opieka i kuratela;</li>
-						<li>Władza rodzicielska (ograniczenie i zawieszenie);</li>
-						<li>Podział majątku;</li>
-						<li>Rozdzielność majątkowa;</li>
-						<li>Ustalenie ojcostwa;</li>
-						<li>Zaprzeczenie ojcostwa.</li>
-					</ul>
-			</div>
-			<div class="image-holder">
-				<img src="/images/sad-rodzinny.jpg" alt="prawo karne" />
-			</div>
-		</div>
+		<ServiceDescription title="Prawo rodzinne" imgSrc="/images/sad-rodzinny.jpg" alt="prawo karne">
+			<p>Kancelaria posiada duże doświadczenie z zakresu prawa rodzinnego zdobyte w licznych postępowaniach
+				zawisłych przed sądami powszechnymi. Reprezentujemy naszych w ramach rozmów przedsądowych, czy w
+				postępowaniach mediacyjnych.</p>
+			<h2>Do naszych specjalizacji z prawa rodzinnego zaliczają się między innymi
+				sprawy, których przedmiotem są:</h2>
+				<ul>
+					<li>Rozwód;</li>
+					<li>Separacja;</li>
+					<li>Uregulowanie kontaktów z dziećmi;</li>
+					<li>Alimenty;</li>
+					<li>Przysposobienie;</li>
+					<li>Opieka i kuratela;</li>
+					<li>Władza rodzicielska (ograniczenie i zawieszenie);</li>
+					<li>Podział majątku;</li>
+					<li>Rozdzielność majątkowa;</li>
+					<li>Ustalenie ojcostwa;</li>
+					<li>Zaprzeczenie ojcostwa.</li>
+				</ul></ServiceDescription>
 	</main>
-	<style>
-		main{
-			flex-direction: column;
-
-			& > h1 {
-				display: flex;
-				justify-content: center;
-				flex-basis: 100%;
-				
-			}
-
-		}
-		.main-container{
-			flex: 1 1 100%;
-			gap: 1rem;
-			
-			& > * {
-				display: flex;
-				/* flex-grow: 1; */
-			}
-
-			& .image-holder > img {
-				height: 25vw;
-				width: auto;
-                                border-radius: 10px;
-			}
-		}
-	</style>
 </Layout>

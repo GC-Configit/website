@@ -59,6 +59,14 @@ const { title } = Astro.props;
     padding-bottom: 3rem;
   }
 
+  @media screen and (max-width: 768px){
+    body {
+      /* fix white empty space after footer in mobile */
+      padding-bottom: 0rem;
+    }
+    
+  }
+
   @font-face {
     font-family: "Proxima Nova";
     src: url("/fonts/proximanova_regular.ttf") format('truetype');
@@ -82,6 +90,18 @@ const { title } = Astro.props;
   @media screen and (max-width: 768px) {
     h1 {
       font-size: 1.75em;
+      word-break: keep-all;
+      max-width: 100vw;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      word-break: keep-all;
+      max-width: 100vw;
+    }
+
+    h3 {
+      font-size: 1.25em;
       word-break: keep-all;
       max-width: 100vw;
     }

@@ -1,0 +1,71 @@
+---
+import Title from "./Title.astro";
+
+interface Props {
+  title?: string;
+  imgSrc?: string;
+  alt?: string;
+}
+
+const { title, imgSrc, alt } = Astro.props;
+---
+
+<div class="service-description-container">
+  {title && <Title>{title}</Title>}
+  <div class="main-container f-row">
+    <div class="text-holder f-column">
+      <slot />
+    </div>
+    {
+      imgSrc && (
+        <div class="image-holder">
+          <img src={imgSrc} alt={alt} />
+        </div>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  main {
+    flex-direction: column;
+
+    & > h1 {
+      display: flex;
+      justify-content: center;
+      flex-basis: 100%;
+    }
+  }
+  .main-container {
+    flex: 1 1 100%;
+    gap: 1rem;
+
+    & > * {
+      display: flex;
+      /* flex-grow: 1; */
+    }
+
+    & .image-holder > img {
+      height: 25vw;
+      width: auto;
+      border-radius: 10px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .main-container {
+      & .image-holder > img {
+        height: auto;
+        max-width: 90vw;
+        border-radius: 10px;
+      }
+
+      .image-holder {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+</style>

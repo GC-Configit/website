@@ -2,7 +2,7 @@
 import IconWithText from "./IconWithText.astro";
 ---
 
-<nav class="f-column">
+<nav class="f-column desktop">
   <div class="image-container f-row">
     <a id="nav-logo-anchor" href="/"><img id="nav-logo" src="/images/navbar-logo-gold.jpg" /></a>
     <div class="contact f-column">
@@ -21,6 +21,13 @@ import IconWithText from "./IconWithText.astro";
   <div class="line"></div>
 </nav>
 
+
+<nav class="f-column mobile">
+  <div class="mobile-image-container">
+    <a id="nav-logo-anchor" href="/"><img id="nav-logo" src="/images/navbar-logo-gold.jpg" /></a>
+  </div>
+</nav>
+
 <style>
   nav {
     a {
@@ -35,11 +42,13 @@ import IconWithText from "./IconWithText.astro";
     }
   }
 
-  @media screen and (max-width: 768px) {
-    nav {
-      display: none;
+  .mobile-image-container{
+    img{
+      max-width: 100lvw;
+      height: auto;
     }
   }
+
   .image-container {
     max-height: 250px;
     & img {

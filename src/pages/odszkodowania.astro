@@ -1,68 +1,50 @@
 ---
-import Title from '../components/Title.astro';
-import Layout from '../layouts/Layout.astro';
+import ServiceDescription from "../components/ServiceDescription.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<Title>Odszkodowania</Title>
-        <div class="main-container f-row">
-			<div class="text-holder f-column">
-				<p>Nasza Kancelaria zajmuje się dochodzeniem świadczeń odszkodowawczych od towarzystw
-					ubezpieczeniowych, bezpośrednio od pracodawców, oraz od placówek medycznych. Prowadzimy sprawy zarówno
-					przed sądami, jak i komisjami do spraw orzekania o zdarzeniach medycznych.</p>
-				<h2>Do naszych specjalizacji z zakresu świadczeń odszkodowawczych zaliczają się
-					między innymi sprawy, których przedmiotem są:</h2>
-					<ul>
-						<li>Szkody komunikacyjne (również szkody w ramach „Zielonej Karty” i od UFG);</li>
-						<li>Odszkodowania uzupełniające (dopłaty) za zaniżone koszty naprawy samochodu;</li>
-						<li>Zwrotu kosztów najmu pojazdu zastępczego;</li>
-						<li>Zadośćuczynienie dla najbliższych krewnych ofiar wypadków śmiertelnych;</li>
-						<li>Renty dla dziecka z tytułu śmierci rodzica w wypadku komunikacyjnym;</li>
-						<li>Szkody majątkowe;</li>
-						<li>Szkody na zdrowiu i zadośćuczynienia za doznane krzywdy;</li>
-						<li>Błędy w sztuce lekarskiej;</li>
-						<li>Szkody w pracy;</li>
-						<li>Szkody rolnicze;</li>
-						<li>Renty, zwroty kosztów leczenia;</li>
-						<li>Roszczenia regresowe;</li>
-						<li>Opóźnione i odwołane loty;</li>
-						<li>Opóźnione pociągi;</li>
-						<li>“zmarnowany urlop”;</li>
-						<li>oraz wiele innych.</li>
-					</ul>
-			</div>
-			<div class="image-holder">
-				<img src="/images/odszkodowania.jpg" alt="prawo karne" />
-			</div>
-		</div>
-	</main>
-	<style>
-		main{
-			flex-direction: column;
-
-			& > h1 {
-				display: flex;
-				justify-content: center;
-				flex-basis: 100%;
-				
-			}
-
-		}
-		.main-container{
-			flex: 1 1 100%;
-			gap: 1rem;
-			
-			& > * {
-				display: flex;
-				/* flex-grow: 1; */
-			}
-
-			& .image-holder > img {
-				height: 25vw;
-				width: auto;
-                                border-radius: 10px;
-			}
-		}
-	</style>
+  <main> 
+    <ServiceDescription title="Odszkodowania" imgSrc="/images/odszkodowania.jpg" alt="prawo karne">
+		<p>
+			Nasza Kancelaria zajmuje się dochodzeniem świadczeń odszkodowawczych
+			od towarzystw ubezpieczeniowych, bezpośrednio od pracodawców, oraz od
+			placówek medycznych. Prowadzimy sprawy zarówno przed sądami, jak i
+			komisjami do spraw orzekania o zdarzeniach medycznych.
+		  </p>
+		  <h2>
+			Do naszych specjalizacji z zakresu świadczeń odszkodowawczych
+			zaliczają się między innymi sprawy, których przedmiotem są:
+		  </h2>
+		  <ul>
+			<li>
+			  Szkody komunikacyjne (również szkody w ramach „Zielonej Karty” i od
+			  UFG);
+			</li>
+			<li>
+			  Odszkodowania uzupełniające (dopłaty) za zaniżone koszty naprawy
+			  samochodu;
+			</li>
+			<li>Zwrotu kosztów najmu pojazdu zastępczego;</li>
+			<li>
+			  Zadośćuczynienie dla najbliższych krewnych ofiar wypadków
+			  śmiertelnych;
+			</li>
+			<li>
+			  Renty dla dziecka z tytułu śmierci rodzica w wypadku komunikacyjnym;
+			</li>
+			<li>Szkody majątkowe;</li>
+			<li>Szkody na zdrowiu i zadośćuczynienia za doznane krzywdy;</li>
+			<li>Błędy w sztuce lekarskiej;</li>
+			<li>Szkody w pracy;</li>
+			<li>Szkody rolnicze;</li>
+			<li>Renty, zwroty kosztów leczenia;</li>
+			<li>Roszczenia regresowe;</li>
+			<li>Opóźnione i odwołane loty;</li>
+			<li>Opóźnione pociągi;</li>
+			<li>“zmarnowany urlop”;</li>
+			<li>oraz wiele innych.</li>
+		  </ul>
+	</ServiceDescription>
+  </main>
 </Layout>
