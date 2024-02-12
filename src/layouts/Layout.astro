@@ -13,7 +13,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <script
@@ -59,7 +59,7 @@ const { title } = Astro.props;
     padding-bottom: 3rem;
   }
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 1200px){
     body {
       /* fix white empty space after footer in mobile */
       padding-bottom: 0rem;
@@ -87,7 +87,7 @@ const { title } = Astro.props;
     font-family: var(--header-font-family);
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     h1 {
       font-size: 1.75em;
       word-break: keep-all;
@@ -124,7 +124,7 @@ const { title } = Astro.props;
     margin-bottom: 10rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     main {
       margin: 0 0.25rem;
     }
@@ -158,7 +158,7 @@ const { title } = Astro.props;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     /* Is related to text-holder that's why its here */
     main > .main-container {
       flex-direction: column;

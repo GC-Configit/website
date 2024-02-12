@@ -166,7 +166,7 @@ import "../layouts/Layout.astro";
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     .header-wrapper {
       height: 80lvh;
       aspect-ratio: 0;
@@ -198,7 +198,7 @@ import "../layouts/Layout.astro";
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     .card-container {
       .cards {
         margin: 0 0.5rem;
@@ -229,13 +229,6 @@ import "../layouts/Layout.astro";
     }
   }
 
-  @media screen and (min-width: 769px) {
-    .green-card p {
-      padding: 0 10rem;
-      text-align: center;
-    }
-  }
-
   .about-us {
     background-color: rgb(240, 242, 244);
 
@@ -261,14 +254,17 @@ import "../layouts/Layout.astro";
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px)  {
     .green-card {
       padding: 2rem;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     .about-us {
       flex-wrap: wrap;
+      flex-grow: 1;
+      justify-content: center;
+
       .text-container {
         margin: 0;
         padding: 1.5rem;

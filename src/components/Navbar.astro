@@ -1,12 +1,15 @@
 ---
 import IconWithText from "./IconWithText.astro";
 ---
-
 <nav class="f-column desktop">
   <div class="image-container f-row">
-    <a id="nav-logo-anchor" href="/"><img id="nav-logo" src="/images/navbar-logo-gold.jpg" /></a>
+    <a class="nav-logo-anchor" href="/"
+      ><img id="nav-logo" src="/images/navbar-logo-gold.jpg" /></a
+    >
     <div class="contact f-column">
-      <IconWithText icon="fa-solid fa-phone" shouldGrow><a href="tel:+48792010469">792 010 469</a></IconWithText>
+      <IconWithText icon="fa-solid fa-phone" shouldGrow>
+        <a href="tel:+48792010469">792 010 469</a>
+      </IconWithText>
     </div>
   </div>
   <ul>
@@ -21,10 +24,11 @@ import IconWithText from "./IconWithText.astro";
   <div class="line"></div>
 </nav>
 
-
 <nav class="f-column mobile">
   <div class="mobile-image-container">
-    <a id="nav-logo-anchor" href="/"><img id="nav-logo" src="/images/navbar-logo-gold.jpg" /></a>
+    <a class="nav-logo-anchor" href="/"
+      ><img id="nav-logo" src="/images/navbar-logo-gold.jpg" /></a
+    >
   </div>
 </nav>
 
@@ -34,7 +38,7 @@ import IconWithText from "./IconWithText.astro";
       color: black;
     }
 
-    .line{
+    .line {
       width: 50%;
       border-bottom: 1px solid #000;
       margin: 0 auto;
@@ -42,9 +46,9 @@ import IconWithText from "./IconWithText.astro";
     }
   }
 
-  .mobile-image-container{
-    img{
-      max-width: 100lvw;
+  .mobile-image-container {
+    img {
+      max-width: 95lvw;
       height: auto;
     }
   }
@@ -66,13 +70,14 @@ import IconWithText from "./IconWithText.astro";
 
     .icon-holder {
       cursor: pointer;
-      i,a {
+      i,
+      a {
         color: black;
       }
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     .image-container {
       max-width: 100vw;
       & img {
@@ -99,8 +104,7 @@ import IconWithText from "./IconWithText.astro";
     cursor: pointer;
   }
 
-  #nav-logo-anchor{
+  .nav-logo-anchor {
     cursor: auto;
   }
-
 </style>
