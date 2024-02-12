@@ -1,48 +1,62 @@
 ---
-import Title from '../components/Title.astro';
-import Layout from '../layouts/Layout.astro';
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<Title>Egzekucja i windykacja</Title>
-        <div class="main-container f-row">
-			<div class="text-holder f-column">
-				<p>Kancelaria prowadzi w pełnym zakresie zleconą windykację należności począwszy od wezwania dłużnika
-					do zapłaty, prowadzenia negocjacji i sporządzania porozumień i ugód dotyczących sposobu zapłaty długu,
-					przygotowania i prowadzenie spraw w sądzie, na postępowaniu zabezpieczającym i egzekucyjnym kończąc.</p>
-			</div>
-			<div class="image-holder">
-				<img src="/images/prawo-karne.jpg" alt="prawo karne" />
-			</div>
-		</div>
-	</main>
-	<style>
-		main{
-			flex-direction: column;
+  <main>
+    <Title>Egzekucja i windykacja</Title>
+    <div class="main-container f-row">
+      <div class="text-holder f-column">
+        <p>
+          Kancelaria adwokacka
+          specjalizująca się w egzekucji i windykacji oferuje kompleksowe usługi
+          prawne związane z odzyskiwaniem należności. Jej głównym celem jest
+          skuteczne prowadzenie postępowań egzekucyjnych, zarówno sądowych, jak
+          i komorniczych, w celu odzyskania długów dla swoich klientów.
+          Kancelaria adwokacka doradza swoim klientom w zakresie strategii
+          egzekucyjnej, analizuje dokumentację i reprezentuje ich interesy przed
+          sądami i organami egzekucyjnymi.
+        </p>
 
-			& > h1 {
-				display: flex;
-				justify-content: center;
-				flex-basis: 100%;
-				
-			}
+		<h3>Do naszych specjalizacji z zakresu egzekucji i windykacji należy m. in.:</h3>
+		<ul>
+			<li>Kompleksowe zastępstwo w postępowaniu egzekucyjnym</li>
+			<li>Odzyskiwanie długów od dłużnika pozostającym w związku małżeńskim</li>
+			<li>Ściąganie należności przeciwko członkom zarządu spółki z .o.o.</li>
+			<li>Skarga pauliańska</li>
+			<li>Zabezpieczanie wierzytelności</li>
+		</ul>
+      </div>
+      <div class="image-holder">
+        <img src="/images/prawo-karne.jpg" alt="prawo karne" />
+      </div>
+    </div>
+  </main>
+  <style>
+    main {
+      flex-direction: column;
 
-		}
-		.main-container{
-			flex: 1 1 100%;
-			gap: 1rem;
-			
-			& > * {
-				display: flex;
-				/* flex-grow: 1; */
-			}
+      & > h1 {
+        display: flex;
+        justify-content: center;
+        flex-basis: 100%;
+      }
+    }
+    .main-container {
+      flex: 1 1 100%;
+      gap: 1rem;
 
-			& .image-holder > img {
-				height: 25vw;
-				width: auto;
-                                border-radius: 10px;
-			}
-		}
-	</style>
+      & > * {
+        display: flex;
+        /* flex-grow: 1; */
+      }
+
+      & .image-holder > img {
+        height: 25vw;
+        width: auto;
+        border-radius: 10px;
+      }
+    }
+  </style>
 </Layout>

@@ -1,6 +1,5 @@
 ---
 import BoxedIcon from "../components/BoxedIcon.astro";
-import IconWithText from "../components/IconWithText.astro";
 import Layout from "../layouts/Layout.astro";
 import "../layouts/Layout.astro";
 ---
@@ -78,7 +77,7 @@ import "../layouts/Layout.astro";
           Reprezentujemy naszych w ramach rozmów przedsądowych, czy w
           postępowaniach mediacyjnych.
         </BoxedIcon>
-        <BoxedIcon icon="fa-solid fa-franc-sign" header="pomoc frankowiczą">
+        <BoxedIcon icon="fa-solid fa-franc-sign" header="pomoc frankowiczom" href="/pomoc-frankowiczom">
           Nasz akancelaria świadczy kompleksową obsługę prawną dla
           kredytobiorców posiadających kredyt waloryzowany kursem franka
           szwajcarskiego bądź pozostałych walut obcych
@@ -163,6 +162,14 @@ import "../layouts/Layout.astro";
     }
   }
 
+  @media screen and (max-width: 768px){
+    .header-wrapper{
+      height: 80lvh;
+      aspect-ratio: 0;
+      margin: 0;
+    }
+  }
+
   main {
     flex-direction: column;
   }
@@ -218,22 +225,30 @@ import "../layouts/Layout.astro";
     }
   }
 
+  @media screen and (min-width: 769px) {
+    .green-card p {
+      padding: 0 10rem;
+      text-align: center;
+    }
+  }
+
   .about-us {
     background-color: rgb(240, 242, 244);
 
     img {
       padding: 2rem;
       padding-left: 5rem;
-      object-fit: cover;
+      object-fit: scale-down;
     }
 
     .text-container {
-      margin: 8rem 5rem;
-      padding: 2.5rem;
+      margin: 6rem 12rem;
+      padding: 2.5rem 4rem;
       background-color: rgb(34, 61, 60);
       h1,
       p {
         color: #fff;
+        text-justify: center;
       }
 
       h1 {
@@ -253,7 +268,7 @@ import "../layouts/Layout.astro";
       .text-container {
         margin: 0;
         padding: 1.5rem;
-        
+
         h1 {
           text-align: center;
         }
