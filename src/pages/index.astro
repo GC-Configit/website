@@ -107,7 +107,7 @@ import "../layouts/Layout.astro";
       </p>
     </div>
 
-    <div class="about-us f-row">
+    <div id="o-mnie" class="about-us f-row">
       <img src="/images/about-us.webp" alt="Adwokat Amadeusz Czachorowski" />
       <div class="text-container f-column center">
         <h1>Amadeusz Czachorowski</h1>
@@ -139,7 +139,7 @@ import "../layouts/Layout.astro";
     background-repeat: no-repeat;
     background-position: center;
 
-    webkit-background-size: cover;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
@@ -185,7 +185,7 @@ import "../layouts/Layout.astro";
       padding: 2rem 0;
       flex-wrap: wrap;
 
-      & > * {
+      * {
         /* with gap makes 3 cards in row */
         flex-basis: 25%;
         flex-grow: 1;
@@ -202,7 +202,7 @@ import "../layouts/Layout.astro";
     .card-container {
       .cards {
         margin: 0 0.5rem;
-        & > * {
+        * {
           flex-basis: 100%;
         }
 
@@ -245,7 +245,6 @@ import "../layouts/Layout.astro";
       h1,
       p {
         color: #fff;
-        text-justify: center;
       }
 
       h1 {

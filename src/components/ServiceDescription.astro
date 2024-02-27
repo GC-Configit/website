@@ -30,7 +30,7 @@ const { title, imgSrc, alt } = Astro.props;
   main {
     flex-direction: column;
 
-    & > h1 {
+    h1 {
       display: flex;
       justify-content: center;
       flex-basis: 100%;
@@ -40,9 +40,8 @@ const { title, imgSrc, alt } = Astro.props;
     flex: 1 1 100%;
     gap: 1rem;
 
-    & > * {
+    *:not(li, ul) {
       display: flex;
-      /* flex-grow: 1; */
     }
 
     & .image-holder > img {

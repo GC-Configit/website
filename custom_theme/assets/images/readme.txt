@@ -1,0 +1,1 @@
+Copy here all images used in theme. If you want to upade packe copy <style> and <main> tags from dist after build. You need also to update `/images/` to `/wp-content/themes/custom_theme/assets/images/`
