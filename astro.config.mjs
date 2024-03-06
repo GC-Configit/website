@@ -5,4 +5,4 @@ import { defineConfig } from 'astro/config';
 //     inlineStylesheets: 'never'
 //   }});
 
-export default defineConfig({ devToolbar: { enabled: false }});
+export default defineConfig({ devToolbar: { enabled: false }, build: {inlineStylesheets: 'never'}});

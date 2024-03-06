@@ -2,25 +2,25 @@
 
 ---
 
-<div class="title-holder f-row center">
+<div class="title-holder-component f-row center">
   <h1><slot /></h1>
 </div>
 
-<style>
-  .title-holder {
-    background-color: rgb(34,61,60);
+<style lang="scss">
+  .title-holder-component {
+    background-color: rgb(34, 61, 60);
     margin: 0 -5rem;
     margin-bottom: 2rem;
     padding: 2rem 0;
-  }
-  h1 {
-    color: #fff;
+    
+    h1 {
+      color: #fff;
+    }
   }
 
-  @media screen and (max-width: 1200px){
-    .title-holder {
+  @media screen and (max-width: 1200px) {
+    .title-holder-component {
       margin: 0;
     }
-    
   }
 </style>

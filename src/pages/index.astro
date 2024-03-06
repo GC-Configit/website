@@ -129,7 +129,7 @@ import "../layouts/Layout.astro";
   </main>
 </Layout>
 
-<style>
+<style is:global lang="scss">
   .header-wrapper {
     background-image: url(/images/intro.webp);
     margin: 0 -10rem;
@@ -185,7 +185,7 @@ import "../layouts/Layout.astro";
       padding: 2rem 0;
       flex-wrap: wrap;
 
-      * {
+      > * {
         /* with gap makes 3 cards in row */
         flex-basis: 25%;
         flex-grow: 1;
