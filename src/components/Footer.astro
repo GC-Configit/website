@@ -16,13 +16,23 @@
         Email: adwokat.czachorowski@gmail.com
         <br />
         kom. 792-010-469
+        <br />
+        <a href="https://www.instagram.com/adwokat_czachorowski"><i class="fa-brands fa-instagram"></i></a>
       </p>
     </div>
   </div>
-  <p>&copy; 2023 Advocate Office. All rights reserved.</p>
+  <p>
+    &copy; <span id="copyright">
+      <script>
+        document
+          .getElementById("copyright")
+          .appendChild(document.createTextNode(new Date().getFullYear().toString()));
+      </script>
+    </span> Advocate Office. All rights reserved.
+  </p>
 </footer>
 
-<style lang="scss">
+<style lang="scss" is:global>
   footer {
     background-color: rgb(34, 61, 60);
     color: #fff;
@@ -34,23 +44,27 @@
     height: 10rem;
     padding: 1rem 0;
 
-    .container{
+    .container {
       > * {
         padding: 0.25rem 2rem;
       }
     }
 
-
-    h4,p {
+    h4,
+    p, i {
       color: #fff;
     }
 
-    h4{
+    i {
+      cursor: pointer;
+    }
+
+    h4 {
       text-align: left;
       line-height: 1.7em;
     }
 
-    .contact{
+    .contact {
       margin-left: auto;
     }
   }
@@ -68,13 +82,13 @@
 
       padding-left: 1rem;
 
-      .container{
+      .container {
         > * {
           padding: 0;
         }
       }
 
-      .contact{
+      .contact {
         margin-left: unset;
       }
     }

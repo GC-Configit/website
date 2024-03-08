@@ -1,0 +1,57 @@
+---
+
+---
+
+<div class="cookie-bar-holder">
+  <div class="cookie-message-holder">
+    <span
+      >Ta strona korzysta z ciasteczek (tzw. cookies). Dalsze korzystanie oznacza, że zgadzasz
+      się na korzystanie z nich.</span
+    >
+    <button id="accept-cookies">Akceptuję</button>
+  </div>
+</div>
+
+<style is:global>
+  .cookie-bar-holder {
+    position: fixed;
+    display: none;
+    bottom: 0;
+    width: 100%;
+    background-color: #323232;
+    color: #fff;
+    padding: 0.25rem;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .cookie-message-holder button {
+    background-color: #4caf50;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+  }
+</style>
+
+<script>
+  const setCookieDisplay = (value) =>
+    (document.querySelector(".cookie-bar-holder").style.display = value);
+  const cookieKey = "accept-cookie";
+
+  if (localStorage.getItem(cookieKey) == null) {
+    setCookieDisplay("block");
+  }
+
+  document
+    .getElementById("accept-cookies")
+    .addEventListener("click", function () {
+      localStorage.setItem(cookieKey, "accepted");
+      setCookieDisplay("none");
+    });
+</script>
