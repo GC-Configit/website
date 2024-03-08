@@ -41,7 +41,7 @@
 
 <script>
   const setCookieDisplay = (value) =>
-    (document.querySelector(".cookie-bar-holder").style.display = value);
+    (document.querySelector(".cookie-bar-holder") as HTMLElement).style.display = value;
   const cookieKey = "accept-cookie";
 
   if (localStorage.getItem(cookieKey) == null) {
