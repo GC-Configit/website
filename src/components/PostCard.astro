@@ -1,0 +1,71 @@
+---
+// ONLY USED IN index.php for displayin post this compoents here is only for debug purpose
+---
+
+<article class="post-card">
+  <!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
+  <div
+    class="post-thumbnail"
+    style="background-image: url('https://eaoui.github.io/neveshtanpreview/wp-content/uploads/debby-hudson-slAVnEz1wbo-unsplash.jpg')"
+  >
+  </div>
+  <h1 class="entry-title">Lorem ipsum title</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero
+    augue, aliquet eget tempus id, viverra ac leo. Integer mi nulla, convallis
+    at vulputate id, blandit eu nibh. Vivamus vulputate pharetra nulla nec
+    vulputate. Sed facilisis turpis quis est vehicula, eget cursus justo
+    ullamcorper. Donec in eleifend ex. Aenean tempor, mauris vel lacinia
+    commodo, augue ante imperdiet diam, id malesuada nulla nisl sed mauris.
+  </p>
+  <div class="f-row center" style="margin-top: auto;">
+    <a class="button-46" href="malaka">więcej</a>
+  </div>
+</article>
+
+<style lang="scss" is:global>
+  .post-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 2.5rem;
+  /* // For button */
+  padding-bottom: 1rem;
+
+  background-color: #fafafa;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  word-break: break-word;
+}
+
+.post-card h1 {
+  align-self: center;
+  padding: 0 5rem;
+}
+
+.post-card p {
+  padding: 0 2.5rem;
+}
+
+.post-card .post-thumbnail {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #eee;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 192px;
+  border-radius: 8px 8px 0 0;
+}
+</style>

@@ -1,285 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl-PL">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content="Astro v4.3.6" />
-    <script
-      src="https://kit.fontawesome.com/879cc0a6e4.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Amadeusz Czachorowski - Kancelaria Adwokacka</title>
-    <style>
-      span[data-astro-cid-chyfp7gd] {
-        display: flex;
-      }
-      h3[data-astro-cid-chyfp7gd] {
-        flex: 0 0 100%;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        font-weight: 400;
-      }
-      h3[data-astro-cid-chyfp7gd],
-      i[data-astro-cid-chyfp7gd] {
-        margin-right: 0.5rem;
-        font-size: 1.5rem;
-      }
-      i[data-astro-cid-chyfp7gd] {
-        display: flex;
-        justify-content: center;
-        min-width: 2rem;
-      }
-      .grow[data-astro-cid-chyfp7gd] {
-        transition: all 0.2s ease-in-out;
-        cursor: pointer;
-      }
-      .grow[data-astro-cid-chyfp7gd]:hover {
-        transform: scale(1.1);
-      }
-      nav[data-astro-cid-5blmo7yk] {
-        a {
-          color: #000;
-        }
-        .line {
-          width: 50%;
-          border-bottom: 1px solid #000;
-          margin: 0 auto;
-          margin-bottom: 1rem;
-        }
-      }
-      .mobile-image-container[data-astro-cid-5blmo7yk] {
-        img {
-          max-width: 95lvw;
-          height: auto;
-        }
-      }
-      .image-container[data-astro-cid-5blmo7yk] {
-        max-height: 250px;
-        & img[data-astro-cid-5blmo7yk] {
-          min-width: min(1226px, 90vw);
-          width: auto;
-          height: 10rem;
-          mix-blend-mode: multiply;
-        }
-        .contact {
-          padding-left: 12rem;
-          align-content: stretch;
-          justify-content: center;
-        }
-        .icon-holder {
-          cursor: pointer;
-          i,
-          a {
-            color: #000;
-          }
-        }
-      }
-      @media screen and (max-width: 1200px) {
-        .image-container[data-astro-cid-5blmo7yk] {
-          max-width: 100vw;
-          & img[data-astro-cid-5blmo7yk] {
-            max-width: 100%;
-          }
-        }
-      }
-      ul[data-astro-cid-5blmo7yk] {
-        display: flex;
-        justify-content: center;
-        column-gap: 5rem;
-        list-style-type: none;
-        font-weight: 500;
-        margin-top: -0.25rem;
-        padding-bottom: 1rem;
-        z-index: 1;
-      }
-      a[data-astro-cid-5blmo7yk] {
-        text-decoration: none;
-        color: #fff;
-        font-weight: 700;
-        cursor: pointer;
-      }
-      .nav-logo-anchor[data-astro-cid-5blmo7yk] {
-        cursor: auto;
-      }
-      footer[data-astro-cid-sz7xmlte] {
-        background-color: #223d3c;
-        color: #fff;
-        text-align: center;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 10rem;
-        padding: 1rem 0;
-        .container {
-          > * {
-            padding: 0.25rem 2rem;
-          }
-        }
-        h4,
-        p {
-          color: #fff;
-        }
-        h4 {
-          text-align: left;
-          line-height: 1.7em;
-        }
-        .contact {
-          margin-left: auto;
-        }
-      }
-      @media screen and (max-width: 1200px) {
-        footer[data-astro-cid-sz7xmlte] {
-          position: static;
-          margin-top: 2rem;
-          height: auto;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          width: unset;
-          padding-left: 1rem;
-          .container {
-            > * {
-              padding: 0;
-            }
-          }
-          .contact {
-            margin-left: unset;
-          }
-        }
-      }
-      :root {
-        --primary-text: rgb(34, 61, 60);
-        --standard-font-family: "Proxima Nova", serif;
-        --header-font-family: "Linotype Diot Italic", serif;
-        --secondary-text: #fff;
-        --background-color: #fff;
-      }
-      html,
-      body {
-        font-family: Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      * {
-        font-family: var(--standard-font-family);
-      }
-      html {
-        height: 0;
-      }
-      body {
-        background-color: var(--background-color);
-        position: relative;
-        min-height: 100vh;
-        padding-bottom: 3rem;
-      }
-      @media screen and (max-width: 1200px) {
-        body {
-          padding-bottom: 0rem;
-        }
-      }
-      @font-face {
-        font-family: Proxima Nova;
-        src: url(/fonts/proximanova_regular.ttf) format("truetype");
-      }
-      @font-face {
-        font-family: Linotype Diot Italic;
-        src: url(/fonts/linotypediot_italic.ttf) format("truetype");
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: var(--primary-text);
-        font-family: var(--header-font-family);
-      }
-      @media screen and (max-width: 1200px) {
-        h1 {
-          font-size: 1.75em;
-          word-break: keep-all;
-          max-width: 100vw;
-        }
-        h2 {
-          font-size: 1.5em;
-          word-break: keep-all;
-          max-width: 100vw;
-        }
-        h3 {
-          font-size: 1.25em;
-          word-break: keep-all;
-          max-width: 100vw;
-        }
-      }
-      i {
-        color: var(--primary-text);
-      }
-      p {
-        color: var(--primary-text);
-        line-height: 1.7em;
-        text-align: justify;
-      }
-      main {
-        display: flex;
-        margin: 0 10rem 10rem;
-      }
-      @media screen and (max-width: 1200px) {
-        main {
-          margin: 0 0.25rem;
-        }
-      }
-      .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .f-column {
-        display: flex;
-        flex-direction: column;
-      }
-      .f-row {
-        display: flex;
-        flex-direction: row;
-      }
-      .mobile {
-        display: none;
-      }
-      .text-holder {
-        p,
-        li {
-          line-height: 1.7em;
-        }
-      }
-      @media screen and (max-width: 1200px) {
-        main > .main-container {
-          flex-direction: column;
-        }
-        .f-row {
-          flex-wrap: wrap;
-        }
-        .mobile {
-          display: block;
-        }
-        .desktop {
-          display: none;
-        }
-      }
-      .p-1 {
-        padding: 1rem;
-      }
-    </style>
+    <meta name="google-site-verification" content="vHY64JRm9W2_i7sfV3cINygYx6rudQjtucNtJpUCNRc" />
+    <!-- Pre load images and fonts -->
+    <link rel="preload" as="image" href="/wp-content/themes/custom_theme/assets/images/intro.webp">
+    <link rel="preload" as="image" href="/wp-content/themes/custom_theme/assets/images/navbar-logo-gold.jpg">
+    <link rel="preload" as="font" href="/wp-content/themes/custom_theme/assets/fonts/proximanova_regular.ttf">
+    <link rel="preload" as="font" href="/wp-content/themes/custom_theme/assets/fonts/linotypediot_italic.ttf">
+    <title>Czachorowski Adwokat</title>
+    <!-- Icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/wp-content/themes/custom_theme/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/wp-content/themes/custom_theme/assets/images/favicon-16x16.png"
+    />
+    <script type="module">
+      document
+        .getElementById("copyright")
+        .appendChild(
+          document.createTextNode(new Date().getFullYear().toString())
+        );
+      const e = (o) =>
+          (document.querySelector(".cookie-bar-holder").style.display = o),
+        t = "accept-cookie";
+      localStorage.getItem(t) == null && e("block");
+      document
+        .getElementById("accept-cookies")
+        .addEventListener("click", function () {
+          localStorage.setItem(t, "accepted"), e("none");
+        });
+    </script>
     <?php wp_head();?>
 </head>
 <!-- beginning of body + navbar -->
-<body>
+ <body>
+    <!-- Desktop -->
     <nav class="f-column desktop" data-astro-cid-5blmo7yk>
       <div class="image-container f-row" data-astro-cid-5blmo7yk>
         <a class="nav-logo-anchor" href="/" data-astro-cid-5blmo7yk
           ><img
-            alt="logo"
+            alt="log"
             src="/wp-content/themes/custom_theme/assets/images/navbar-logo-gold.jpg"
             data-astro-cid-5blmo7yk
         /></a>
@@ -302,23 +72,24 @@
           <a href="/" data-astro-cid-5blmo7yk>Strona Główna</a>
         </li>
         <li data-astro-cid-5blmo7yk>
-          <a href="/prawo-karne-i-wykroczenia" data-astro-cid-5blmo7yk
-            >Prawo karne i wykroczenia</a
-          >
+          <a href="/#o-mnie" data-astro-cid-5blmo7yk>O mnie</a>
         </li>
-        <li data-astro-cid-5blmo7yk>
-          <a href="/prawo-cywilne" data-astro-cid-5blmo7yk>Prawo cywilne</a>
-        </li>
-        <li data-astro-cid-5blmo7yk>
-          <a href="/odszkodowania" data-astro-cid-5blmo7yk>Odszkodowania</a>
-        </li>
-        <li data-astro-cid-5blmo7yk>
-          <a href="/prawo-rodzinne" data-astro-cid-5blmo7yk>Prawo rodzinne</a>
-        </li>
-        <li data-astro-cid-5blmo7yk>
-          <a href="/egzekucja-i-windykacja" data-astro-cid-5blmo7yk
-            >Egzekucja i windykacja</a
-          >
+        <li class="dropdown" data-astro-cid-5blmo7yk>
+          <a data-astro-cid-5blmo7yk>Oferta</a>
+          <div class="dropdown-content" data-astro-cid-5blmo7yk>
+            <a href="/prawo-karne-i-wykroczenia" data-astro-cid-5blmo7yk
+              >Prawo karne i wykroczenia</a
+            >
+            <a href="/prawo-cywilne" data-astro-cid-5blmo7yk>Prawo cywilne</a>
+            <a href="/odszkodowania" data-astro-cid-5blmo7yk>Odszkodowania</a>
+            <a href="/prawo-rodzinne" data-astro-cid-5blmo7yk>Prawo rodzinne</a>
+            <a href="/egzekucja-i-windykacja" data-astro-cid-5blmo7yk
+              >Egzekucja i windykacja</a
+            >
+            <a href="/pomoc-frankowiczom" data-astro-cid-5blmo7yk
+              >Pomoc frankowiczom</a
+            >
+          </div>
         </li>
         <li data-astro-cid-5blmo7yk>
           <a href="/kontakt" data-astro-cid-5blmo7yk>Kontakt</a>
@@ -326,6 +97,7 @@
       </ul>
       <div class="line" data-astro-cid-5blmo7yk></div>
     </nav>
+    <!-- Mobile -->
     <nav class="f-column mobile" data-astro-cid-5blmo7yk>
       <div class="mobile-image-container" data-astro-cid-5blmo7yk>
         <a class="nav-logo-anchor" href="/" data-astro-cid-5blmo7yk
@@ -334,5 +106,49 @@
             src="/wp-content/themes/custom_theme/assets/images/navbar-logo-gold.jpg"
             data-astro-cid-5blmo7yk
         /></a>
+        <div class="row" data-astro-cid-5blmo7yk>
+          <div class="f-row mobile-menu" data-astro-cid-5blmo7yk>
+            <div class="f-column" data-astro-cid-5blmo7yk>
+              <button class="button-46 dropdown" data-astro-cid-5blmo7yk>
+                <h3 data-astro-cid-5blmo7yk>
+                  <i class="fa-solid fa-bars" data-astro-cid-5blmo7yk></i>
+                </h3>
+                <div class="dropdown-content" data-astro-cid-5blmo7yk>
+                  <a href="/" data-astro-cid-5blmo7yk>Strona Główna</a>
+                  <a href="/#o-mnie" data-astro-cid-5blmo7yk>O mnie</a>
+                  <a href="/kontakt" data-astro-cid-5blmo7yk>Kontakt</a>
+                  <span class="dropdown" data-astro-cid-5blmo7yk>
+                    Oferta
+                    <div
+                      class="dropdown-content internal"
+                      data-astro-cid-5blmo7yk
+                    >
+                      <a
+                        href="/prawo-karne-i-wykroczenia"
+                        data-astro-cid-5blmo7yk
+                        >Prawo karne i wykroczenia</a
+                      >
+                      <a href="/prawo-cywilne" data-astro-cid-5blmo7yk
+                        >Prawo cywilne</a
+                      >
+                      <a href="/odszkodowania" data-astro-cid-5blmo7yk
+                        >Odszkodowania</a
+                      >
+                      <a href="/prawo-rodzinne" data-astro-cid-5blmo7yk
+                        >Prawo rodzinne</a
+                      >
+                      <a href="/egzekucja-i-windykacja" data-astro-cid-5blmo7yk
+                        >Egzekucja i windykacja</a
+                      >
+                      <a href="/pomoc-frankowiczom" data-astro-cid-5blmo7yk
+                        >Pomoc frankowiczom</a
+                      >
+                    </div>
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>

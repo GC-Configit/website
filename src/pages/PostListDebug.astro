@@ -1,0 +1,36 @@
+---
+import PostCard from "../components/PostCard.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+<main>
+    <div class="post-container">
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+      </div>
+</main>
+</Layout>
+
+<style is:global>
+.post-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  > * {
+    flex-basis: min(800px, 40%);
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .post-container {
+    flex-direction: column;
+  }
+}
+</style>

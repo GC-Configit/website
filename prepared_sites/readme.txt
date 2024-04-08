@@ -1,0 +1,1 @@
+TODO: COPY AND UPDATE ALL SITES AT WP-ADMIN, remove it from theme
