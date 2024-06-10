@@ -2,7 +2,7 @@
 Theme Name: Replace with your Theme's name.
 Theme URI: Your Theme's URI
 Description: A brief description.
-Version: 1.2
+Version: 1.3
 Author: You
 Author URI: Your website address.
 */
@@ -105,10 +105,9 @@ nav[data-astro-cid-5blmo7yk] .line[data-astro-cid-5blmo7yk] {
   max-height: 250px;
 }
 .image-container[data-astro-cid-5blmo7yk] img[data-astro-cid-5blmo7yk] {
-  min-width: min(1226px, 90vw);
+  max-width: min(1226px, 75vw);
   width: auto;
   height: 10rem;
-  mix-blend-mode: multiply;
 }
 .image-container[data-astro-cid-5blmo7yk] .contact[data-astro-cid-5blmo7yk] {
   padding-left: 2rem;
@@ -471,7 +470,7 @@ a[data-astro-cid-c2ai2euq] {
   position: absolute;
   top: 20vw;
   left: 3vw;
-  border-left: 0.75rem dashed lightgray;
+  border-left: 0.75rem;
   padding-left: 2rem;
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
@@ -583,7 +582,7 @@ main {
   .header-wrapper .quote {
     top: 60vw;
     left: 5vw;
-    border-left: 0.25rem dashed lightgray;
+    border-left: 0.25rem;
     padding-left: 1.5rem;
   }
 }
@@ -681,13 +680,10 @@ a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  
-  > * {
-    flex-basis: min(800px, 40%);
-  }
+  max-width: 2020px;
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px) {
   .post-container {
     flex-direction: column;
   }
@@ -699,6 +695,8 @@ a:hover {
   align-items: center;
 
   margin: 2.5rem;
+  /* exactly 3 items */
+  max-width: 425px;
   /* // For button */
   padding-bottom: 1rem;
 
@@ -723,6 +721,21 @@ a:hover {
 
 .post-card p {
   padding: 0 2.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .post-card {
+    margin: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-card h1 {
+    padding: 0 1rem;
+  }
+
+  .post-card p {
+    padding: 0 0.5rem;
+  }
 }
 
 .post-card .post-thumbnail {

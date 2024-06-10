@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-<main>
+<main class="center">
   <div class="post-container">
     <?php while ( have_posts() ) : the_post(); ?>
         <!-- Posts handler -->
         <?php if ( !is_page() ):?>
-          <article class="post-card">
+          <article class="post-card" onClick="location.href='<?php the_permalink(); ?>';">
             <?php if (has_post_thumbnail()) : ?>
               <div
                 class="post-thumbnail"

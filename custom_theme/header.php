@@ -55,15 +55,19 @@
         /></a>
         <div class="contact f-column" data-astro-cid-5blmo7yk>
           <div class="icon-holder f-row" data-astro-cid-chyfp7gd>
-            <span class="grow" data-astro-cid-chyfp7gd
-              ><i class="fa-solid fa-phone" data-astro-cid-chyfp7gd></i>
+            <span class="grow" data-astro-cid-chyfp7gd>
+              <i class="fa-solid fa-phone" data-astro-cid-chyfp7gd></i>
               <h3 data-astro-cid-chyfp7gd>
                 <a href="tel:+48792010469" data-astro-cid-5blmo7yk
                   >792 010 469</a
                 >
               </h3>
-              <span data-astro-cid-chyfp7gd></span
-            ></span>
+            </span>
+          </div>
+          <div class="icon-holder f-row" data-astro-cid-chyfp7gd>
+            <a href="https://www.instagram.com/adwokat_czachorowski">
+              <i style="font-size: 2rem;" class="fa-brands fa-instagram"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -94,6 +98,8 @@
         <li data-astro-cid-5blmo7yk>
           <a href="/kontakt" data-astro-cid-5blmo7yk>Kontakt</a>
         </li>
+        <li data-astro-cid-5blmo7yk>
+          <a href="/blog" data-astro-cid-5blmo7yk>Blog</a>
       </ul>
       <div class="line" data-astro-cid-5blmo7yk></div>
     </nav>
@@ -117,6 +123,7 @@
                   <a href="/" data-astro-cid-5blmo7yk>Strona Główna</a>
                   <a href="/#o-mnie" data-astro-cid-5blmo7yk>O mnie</a>
                   <a href="/kontakt" data-astro-cid-5blmo7yk>Kontakt</a>
+                  <a href="/blog" data-astro-cid-5blmo7yk>Blog</a>
                   <span class="dropdown" data-astro-cid-5blmo7yk>
                     Oferta
                     <div
